@@ -1,12 +1,12 @@
-# Daily revenue of the grocery store and initial assumption
-revenue = 2000
-is_business_successful = False
+# Initial variables and values
+num = 8941 % 931
+result = 'blank'
 
-# Determine business success
-if revenue >= 2000:
-  is_business_successful = True
+# Determine whether the number is odd or even
+if num % 2:
+    result = 'odd'
 else:
-  is_business_successful = False
+    result = 'even'
 
 # Testing
-print("Is besiness hits the desired revenue?", is_business_successful)
+print("The number num ", num, " is", result)
