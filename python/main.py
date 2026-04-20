@@ -1,14 +1,18 @@
-# Item costs
-apples_price = 15
-oranges_price = 25
-bananas_price = 15
+bobs_age = 17
+alices_age = 20
+johns_age = 10
+mikes_age = 18
 
-# Check if apples and bananas have the same cost
-is_same_price = (apples_price == bananas_price)
+# Checking if both Bob and John can enter the park
+can_bob_and_john_enter = (bobs_age >= 18) or (johns_age >= 18)
 
-# Check if the combination of apples and oranges is cheaper than oranges and bananas
-is_cheaper_combination = (apples_price + oranges_price < oranges_price + bananas_price)
+# Checking if either Alice or Mike can enter the park
+can_alice_or_mike_enter = (alices_age >= 18) and (mikes_age >= 18)
 
-# Testing 
-print("The result of the first comparison:", is_same_price)
-print("The result of the second comparison:", is_cheaper_combination)
+# Checking if Bob, Alice, and John can all enter the park together
+can_bob_alice_john_enter = (bobs_age >= 18) or (alices_age >= 18) or (johns_age >= 18)
+
+# Testing
+print("Can Bob and John enter the park together? ", can_bob_and_john_enter)
+print("Can Alice or Mike enter the park? ", can_alice_or_mike_enter)
+print("Can Bob, Alice and John all enter the park together? ", can_bob_alice_john_enter)
