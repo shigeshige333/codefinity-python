@@ -1,18 +1,12 @@
-bobs_age = 17
-alices_age = 20
-johns_age = 10
-mikes_age = 18
+# Daily revenue of the grocery store and initial assumption
+revenue = 2000
+is_business_successful = False
 
-# Checking if both Bob and John can enter the park
-can_bob_and_john_enter = (bobs_age >= 18) or (johns_age >= 18)
-
-# Checking if either Alice or Mike can enter the park
-can_alice_or_mike_enter = (alices_age >= 18) and (mikes_age >= 18)
-
-# Checking if Bob, Alice, and John can all enter the park together
-can_bob_alice_john_enter = (bobs_age >= 18) or (alices_age >= 18) or (johns_age >= 18)
+# Determine business success
+if revenue >= 2000:
+  is_business_successful = True
+else:
+  is_business_successful = False
 
 # Testing
-print("Can Bob and John enter the park together? ", can_bob_and_john_enter)
-print("Can Alice or Mike enter the park? ", can_alice_or_mike_enter)
-print("Can Bob, Alice and John all enter the park together? ", can_bob_alice_john_enter)
+print("Is besiness hits the desired revenue?", is_business_successful)
