@@ -1,12 +1,17 @@
 # Initial variables and values
-num = 8941 % 931
+initial_budget = 10000
+changes = (1 + 0.05) * (1 - 0.02) * (1 + 0.1) * (1 - 0.04) * (1 + 0.03) * (1 - 0.01) * (1 + 0.07) * (1 - 0.06) * (1 + 0.02) * (1 - 0.03)
+final_budget = initial_budget * changes
 result = 'blank'
 
-# Determine whether the number is odd or even
-if num % 2:
-    result = 'odd'
-else:
-    result = 'even'
+# Determine whether the trader made profit, loss, or broke even
+if final_budget > initial_budget:
+    result = "success"
+elif final_budget < initial_budget:
+    result = "failure"
+else: 
+    result = "budget unchanged"
 
 # Testing
-print("The number num ", num, " is", result)
+print("The final budget is:", final_budget)
+print("Result after the trading:", result)
