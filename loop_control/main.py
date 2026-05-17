@@ -4,11 +4,16 @@ travel_costs = [[500, 150, 100, 50], [200, 300, 120, 80], [180, 220, 130, 170], 
 # List to store the first significant expense of each trip
 significant_expenses = []
 
-for i in range(len(travel_costs)):
-    for j in range(len(travel_costs[i])):
-        if travel_costs[i][j] > 200:
-            significant_expenses.append(travel_costs[i][j])
+print('len(travel_const) = ', len(travel_costs))
+print('range(len(travel_const)) = ', range(len(travel_costs)))
+
+i = 0
+for travel_cost in travel_costs:
+    for cost in travel_cost:
+        if cost> 200:
+            significant_expenses.append(cost)
             break
+    i += 1
 
 # Testing
 print('First Significant Expenses:', significant_expenses)
