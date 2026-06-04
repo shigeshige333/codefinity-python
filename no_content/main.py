@@ -9,8 +9,13 @@ def register_user(username, email, age):
     
     return f"User {username} registered successfully!"
 
+#args = {"username":"ShigeShige", "email":"shige333@yahoo.com", "age":54}
+keyword = ["ShigeShige", "mail@yahoo.com", 55]
+
 # Pass the parameters in any way to register a user
-result1 = register_user(username="Shige", email="shige@yahoo.com", age=53)
+#result1 = register_user(username="Shige", email="shige@yahoo.com", age=53)
+#result1 = register_user(**args)
+result1 = register_user(*keyword)
 
 # Testing the result
 print(result1)
