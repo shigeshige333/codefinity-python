@@ -1,5 +1,6 @@
 def calculate_total(*prices):
-    if prices== ():
+#    if prices== ():
+    if not prices:
         return "Your cart is empty."
 
     total = sum(prices)
