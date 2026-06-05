@@ -1,8 +1,8 @@
-def calculate_total(*args):
-    if args == ():
+def calculate_total(*prices):
+    if prices== ():
         return "Your cart is empty."
 
-    total = sum(args)
+    total = sum(prices)
 
     if total >= 200:
         total *= 0.8  # 20% discount
